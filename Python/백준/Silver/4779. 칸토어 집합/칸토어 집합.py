@@ -10,11 +10,8 @@ def getCantor(size):
     side = getCantor(new_size)
     return side + center + side
 
-while True:
-    try:
-        N = int(input())
-        size = 3 ** N
-        result_str = getCantor(size)
-        print(result_str)
-    except EOFError:
-        break
+total = map(int, sys.stdin.read().split())
+for N in total:
+    size = 3 ** N
+    result_str = getCantor(size)
+    print(result_str)
